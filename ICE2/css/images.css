@@ -1,0 +1,55 @@
+
+img{
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  width: 30%;
+}
+
+.hover{
+  transition-property: radius;
+  transition-duration: 1s;
+}
+
+.hover:hover{
+  border-radius: 20%;
+}
+
+.focus:focus{
+  filter: grayscale(100%);
+}
+
+.active:active{
+  opacity: .5;
+}
+
+.bar{
+  display: flex;
+  background-color: #d3d3d3;
+  margin-top:20px;
+  height:60px;
+}
+
+.square{
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  background-color: blue;
+  align-self: center;
+}
+
+@keyframes slide {
+  0%{
+    left:0;
+  }
+  100%{
+    left:110%;
+  }
+
+}
+.square:focus{
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}

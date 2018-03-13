@@ -23,8 +23,10 @@
 				var e = document.getElementsByClassName('errormsg');
 				if (fullname === "" && streetaddr !== "") {
 					e[0].style.display = 'block';
+					e[1].style.display = 'none';
 				} else if (fullname !== "" && streetaddr === "") {
 					e[1].style.display = 'block';
+					e[0].style.display = 'none';
 				} else {
 					e[0].style.display = 'block';
 					e[1].style.display = 'block';
